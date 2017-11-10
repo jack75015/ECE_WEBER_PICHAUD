@@ -1,0 +1,328 @@
+{
+  "contract_name": "Lightning",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "montantTotal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "getIsPayedTotal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner2",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amount1",
+          "type": "uint256"
+        },
+        {
+          "name": "amount2",
+          "type": "uint256"
+        }
+      ],
+      "name": "cashBack",
+      "outputs": [
+        {
+          "name": "sufficient",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "payedOwner2",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner1",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "putMoney2",
+      "outputs": [
+        {
+          "name": "sufficient",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "putMoney1",
+      "outputs": [
+        {
+          "name": "sufficient",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "payedOwner1",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "getBalanceContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "endDate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "getIsPayedOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b6201518042016003555b5b6106478061002a6000396000f300606060405236156100c25763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166316606cbe81146100c7578063238393ce146100ec578063527097251461011f57806355e5bb711461014e578063692f6d331461017b57806373688914146101a257806374e9a838146101d1578063a0e57fc5146101f0578063a4a3ae961461020f578063a8c2980114610236578063c24a0f8b14610267578063d5b3757e1461028c578063f8b2cb4f146102c7575b600080fd5b34156100d257600080fd5b6100da6102f8565b60405190815260200160405180910390f35b34156100f757600080fd5b61010b600160a060020a03600435166102fe565b604051901515815260200160405180910390f35b341561012a57600080fd5b61013261033a565b604051600160a060020a03909116815260200160405180910390f35b341561015957600080fd5b61010b600435602435610349565b604051901515815260200160405180910390f35b341561018657600080fd5b61010b610473565b604051901515815260200160405180910390f35b34156101ad57600080fd5b610132610483565b604051600160a060020a03909116815260200160405180910390f35b61010b600435610492565b604051901515815260200160405180910390f35b61010b600435610529565b604051901515815260200160405180910390f35b341561021a57600080fd5b61010b6105c0565b604051901515815260200160405180910390f35b341561024157600080fd5b6100da600160a060020a03600435166105d0565b60405190815260200160405180910390f35b341561027257600080fd5b6100da6105d9565b60405190815260200160405180910390f35b341561029757600080fd5b6102ab600160a060020a03600435166105df565b6040519115158252151560208201526040908101905180910390f35b34156102d257600080fd5b6100da600160a060020a03600435166105fc565b60405190815260200160405180910390f35b60025481565b60015460009060a060020a900460ff168015610323575060015460a860020a900460ff165b1561033057506001610334565b5060005b5b919050565b600154600160a060020a031681565b600354600090421061035a57600080fd5b60005433600160a060020a0390811691161480610385575060015433600160a060020a039081169116145b151561039057600080fd5b60008054600160a060020a039081168252600460205260408083208390556001805474ff0000000000000000000000000000000000000000191690559154169084156108fc0290859051600060405180830381858888f1935050505015156103f757600080fd5b60018054600160a060020a0390811660009081526004602052604080822091909155825475ff00000000000000000000000000000000000000000019811690935591169083156108fc0290849051600060405180830381858888f19350505050151561046257600080fd5b50600060025560015b5b5b92915050565b60015460a860020a900460ff1681565b600054600160a060020a031681565b60015460009060a860020a900460ff1615156105205760018054600160a060020a0333811673ffffffffffffffffffffffffffffffffffffffff199092169190911780835581166000908152600460205260408082203490558354928316825290205460028054909101905575ff000000000000000000000000000000000000000000191660a860020a1790555b5060015b919050565b60015460009060a060020a900460ff1615156105205760008054600160a060020a0333811673ffffffffffffffffffffffffffffffffffffffff19909216919091178083558116825260046020526040808320349055825490911682529020546002805490910190556001805474ff0000000000000000000000000000000000000000191660a060020a1790555b5060015b919050565b60015460a060020a900460ff1681565b6002545b919050565b60035481565b60015460ff60a060020a820481169160a860020a9004165b915091565b600160a060020a0381166000908152600460205260409020545b9190505600a165627a7a723058206bfee0b3ee23624fe3fdcf578f32c25e04131b75ec6bbc0224cea1b9cd4031440029",
+  "networks": {
+    "1510320589115": {
+      "events": {
+        "0x16d99cb06fd9528f88184dd0483174a09cfd8312c28639858734b0c449cc05b8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "funder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "timestamp",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewContribution",
+          "type": "event"
+        },
+        "0x2c9a57990d2cabea4b70ea170d515c47014fcb3d32f70eac2a5817e5fa7ee3ea": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "funder",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "timestamp",
+              "type": "uint256"
+            }
+          ],
+          "name": "CashBack",
+          "type": "event"
+        },
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        },
+        "0x5f7675b09617d2c9fa4fd13058ee5877a9538f626b0308816736e83748a45040": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_contributor",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_value",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "_timestamp",
+              "type": "uint256"
+            }
+          ],
+          "name": "Contribution",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x8e1ce60c2c33fe0a96db401749b930dc678f84d7",
+      "updated_at": 1510320703686
+    },
+    "1510333229759": {
+      "events": {},
+      "links": {},
+      "address": "0xa18a3d683fd3b0334729426677e3a061d91c047f",
+      "updated_at": 1510333802379
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1510333802379
+}

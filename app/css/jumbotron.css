@@ -1,0 +1,45 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.bg-1 {
+  background-color: rgb(230,243,255);
+  margin-bottom: 5x;
+}
+.bg-2 {
+  background-color: rgb(242, 242, 242);
+  margin-bottom: 5px;
+}
+.bg-3 {
+  background-color: rgb(235, 240, 250);
+  margin-bottom: 5px;
+
+}
+.bg-4 {
+  background-color: red;
+  margin-bottom: 5px;
+}
+.bg-5 {
+  background-color: pink;
+  margin-bottom: 5px;
+}
+
+.form-group p {
+  margin-top: 5px;
+}
+
+.part {
+  height: 350px;
+}
+
+.transbtn {
+  height: 40px;
+  padding:3px;
+}
+
+.centered {
+  margin: auto;
+  max-width: 300px;
+}

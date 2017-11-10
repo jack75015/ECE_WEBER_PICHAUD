@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>fusion</title>
+
+    <!-- Bootstrap core CSS-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src="./app.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Lightning for Ethereum</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome in the beta version of Lightning for Ethereum</h1>
+        <p>Here you'll be able to create a smartcontract with a buddy, make off-chain transactions and close the contract at any time! </p>
+      </div>
+    </div>
+
+    <div class="container bg-1 part" id="eth1">
+      <div class="row ">
+        <h2 class='text-center'>Create your smart contract here</h2>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+          <h2>Owner 1</h2>
+          <h4>Balance Adress Owner1: <span class="black"><span id="balanceAdressOwner1"></span> ETH</span></h4>
+          <div class='form-group'>
+            <label for="owner1money"> How much money are you commiting to the smartcontract?</label>
+            <input id="amount1" type="text"  class="form-control" placeholder="Amount">
+          </div>
+          <p><button class="btn btn-primary" id="send1" onclick="App.sendMoney('owner1')">Done &raquo;</button></p>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <h2>Owner 2</h2>
+          <h4>Balance Adress Owner2: <span class="black"><span id="balanceAdressOwner2"></span> ETH</span></h4>
+          <div class='form-group'>
+            <label for="owner2money"> How much money are you commiting to the smartcontract?</label>
+            <input  type="text" id="amount2" placeholder="Amount" class="form-control">
+          </div>
+          <p><button class="btn btn-primary" id="send2" onclick="App.sendMoney('owner2')">Done &raquo;</button></p>
+       </div>
+       <div class="col-lg-1"></div>
+
+       <div class="centered">
+       <div class="row">
+         
+       </div>
+     </div>
+
+     </div>
+   </div>
+
+    <div class="container bg-2 part">
+      <div class="row ">
+        <h2 class='text-center'>Information about your contract </h2>
+        <hr>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-8">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Money added by Owner 1 </th>
+                  <th>Money added by Owner 2 </th>
+                  <th> Total </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="info">
+                  <td id="balanceOwner1">  </td>
+                  <td id="balanceOwner2">  </td>
+                  <td id="contractBalance"> </td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+            <p> <h5> Number of transactions passed: </h3><span id="nb_tx"> 0 </span> </p>
+            <div class="logspace">
+              <h3> Logs </h3>
+              <p id="status"> </p>
+            </div>
+          </div>
+          <div class="col-lg-2"></div>
+        </div>
+      </div>
+
+
+    <div id="eth2" class="container bg-1 part">
+      <div class="row ">
+        <h2 class='text-center'>Now, make payments !</h2>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4">
+          <h2>Owner 1</h2>
+          <div class='form-group'>
+            <label for="owner1money"> Send money to Owner 2 </label>
+            <input type="text" class="form-control" id="amount11">
+            <p><button id="send11" onclick="App.sendMoneyLightning('owner1')"class="btn btn-primary"> Send &raquo;</button></p>
+            <label> Montant de votre balance virtuelle </label>
+            <p class="black"><span id="balanceOwner11"></span> ETH</p>
+          </div>
+
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4">
+          <h2>Owner 2</h2>
+          <div class='form-group'>
+            <label for="owner2money"> Send money to Owner 1</label>
+            <input type="text" class="form-control" id="amount22">
+            <p><button id="send22" onclick="App.sendMoneyLightning('owner2')"class="btn btn-primary"> Send &raquo;</button></p>
+            <label> Montant de votre balance virtuelle </label>
+            <p class="black"><span id="balanceOwner22"></span> ETH</p>
+          </div>
+       </div>
+       <div class="col-lg-1"></div>
+
+      </div>
+      <div class="centered">
+       <div class="row">
+         <div class="col-lg-12">
+         <button id="send2" type="button" class="btn btn-success"  onclick="App.cashBack()"> Close smartcontract </button>
+        </div>
+       </div>
+     </div>
+    </div>
+
+<div class="container">
+      <hr>
+      <footer>
+        <p>&copy; Lightning for Ethereum</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
